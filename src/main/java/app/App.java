@@ -28,7 +28,7 @@ public class App {
         List<Acompanhante> acompanhantes = new ArrayList<Acompanhante>();
         acompanhantes.add(acompanhante1);
         acompanhantes.add(acompanhante2);
-        // adicionando mais acompanhantes para forçar o erro
+        // adicionando mais acompanhantes para forçar a exception
         acompanhantes.add(acompanhante2);
         acompanhantes.add(acompanhante2);
         acompanhantes.add(acompanhante2);
