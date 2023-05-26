@@ -48,9 +48,7 @@ public class App {
             System.out.println(acompanhante.isConfirmouCadastro());
         }
 
-        // Início do comentário
-        // Trabalhando com a herança codificada
-        ViagemNacional viagemNacional = new ViagemNacional(Destinos.GOIAS);
+        ViagemNacional viagemNacional = new ViagemNacional(Destinos.MANAUS);
         try {
             viagemNacional.setAcompanhantes(acompanhantes);
         } catch (Exception excecao) {
@@ -59,7 +57,7 @@ public class App {
         }
         viagemNacional.setCpf("11122233377");
 
-        ViagemInternacional viagemInternacional = new ViagemInternacional(Destinos.MIAMI);
+        ViagemInternacional viagemInternacional = new ViagemInternacional(Destinos.ACAPULCO);
         try {
             viagemInternacional.setAcompanhantes(acompanhantes);
         } catch (Exception excecao) {
@@ -73,6 +71,9 @@ public class App {
 
         System.out.println(viagemNacional.getCpf());
         System.out.println(viagemInternacional.getPassaporte());
-        // Fim do comentário
+
+        // utilizando o método implementado para a interface
+        System.out.println(viagemInternacional.calcularPrevisaoDeDiasParaRetorno());
+        System.out.println(viagemNacional.calcularPrevisaoDeDiasParaRetorno());
     }
 }
