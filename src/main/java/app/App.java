@@ -1,15 +1,16 @@
 package app;
 
 import dto.Viagem;
+import enums.Destinos;
 
 public class App {
     public static void main(String[] args) {
-        Viagem viagem = new Viagem("Osasco");
+        Viagem viagem = new Viagem(Destinos.OSASCO);
 
-        viagem.setDestino("Maringá");
+        viagem.setDestino(Destinos.RECIFE);
 
-        viagem.setDestino("Miami");
+        viagem.setDestino(Destinos.MARINGA);
 
-        System.out.println(viagem.getDestino());
+        System.out.println(viagem.getDestino().getCidade());
     }
 }

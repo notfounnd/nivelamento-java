@@ -1,20 +1,22 @@
 package dto;
 
+import enums.Destinos;
+
 public class Viagem {
     // atributos da classe
-    private String destino;
+    private Destinos destino;
 
     // construtor da classe
-    public Viagem(String lugarDeDestino) {
+    public Viagem(Destinos lugarDeDestino) {
         this.destino = lugarDeDestino;
     }
 
     // métodos da classe
-    public String getDestino() {
+    public Destinos getDestino() {
         return this.destino;
     }
 
-    public void setDestino(String lugarDeDestino) {
+    public void setDestino(Destinos lugarDeDestino) {
         this.destino = lugarDeDestino;
     }
 }
