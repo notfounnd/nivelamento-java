@@ -2,6 +2,8 @@ package app;
 
 import dto.Acompanhante;
 import dto.Viagem;
+import dto.ViagemInternacional;
+import dto.ViagemNacional;
 import enums.Destinos;
 
 import java.util.ArrayList;
@@ -26,8 +28,17 @@ public class App {
         List<Acompanhante> acompanhantes = new ArrayList<Acompanhante>();
         acompanhantes.add(acompanhante1);
         acompanhantes.add(acompanhante2);
+        // adicionando mais acompanhantes para forçar o erro
+        acompanhantes.add(acompanhante2);
+        acompanhantes.add(acompanhante2);
+        acompanhantes.add(acompanhante2);
 
-        viagem.setAcompanhantes(acompanhantes);
+        try {
+            viagem.setAcompanhantes(acompanhantes);
+        } catch (Exception excecao) {
+            System.out.println("Ocorreu um erro: ");
+            System.out.println(excecao.getMessage());
+        }
 
         System.out.println(viagem.getDestino().getCidade());
         System.out.println(viagem.getAcompanhantes().size());
@@ -38,12 +49,30 @@ public class App {
         }
 
         // Início do comentário
-        // Código de exemplo do laço "for" arcaico
-        //
-        // for (int iterador = 0 ; iterador < viagem.getAcompanhantes().size() ; iterador++) {
-        //     System.out.println(viagem.getAcompanhantes().get(iterador).getNome());
-        //     System.out.println(viagem.getAcompanhantes().get(iterador).isConfirmouCadastro());
-        // }
+        // Trabalhando com a herança codificada
+        ViagemNacional viagemNacional = new ViagemNacional(Destinos.GOIAS);
+        try {
+            viagemNacional.setAcompanhantes(acompanhantes);
+        } catch (Exception excecao) {
+            System.out.println("Ocorreu um erro: ");
+            System.out.println(excecao.getMessage());
+        }
+        viagemNacional.setCpf("11122233377");
+
+        ViagemInternacional viagemInternacional = new ViagemInternacional(Destinos.MIAMI);
+        try {
+            viagemInternacional.setAcompanhantes(acompanhantes);
+        } catch (Exception excecao) {
+            System.out.println("Ocorreu um erro: ");
+            System.out.println(excecao.getMessage());
+        }
+        viagemInternacional.setPassaporte("11111-5");
+
+        System.out.println(viagemNacional.getDestino().getCidade());
+        System.out.println(viagemInternacional.getDestino().getCidade());
+
+        System.out.println(viagemNacional.getCpf());
+        System.out.println(viagemInternacional.getPassaporte());
         // Fim do comentário
     }
 }

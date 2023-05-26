@@ -7,7 +7,7 @@ public class Acompanhante {
 
     // métodos da classe
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -15,7 +15,7 @@ public class Acompanhante {
     }
 
     public boolean isConfirmouCadastro() {
-        return confirmouCadastro;
+        return this.confirmouCadastro;
     }
 
     public void setConfirmouCadastro(boolean confirmouCadastro) {
