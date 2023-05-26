@@ -29,18 +29,4 @@ public class Viagem {
     public void setAcompanhantes(List<Acompanhante> acompanhantes) {
         this.acompanhantes = acompanhantes;
     }
-
-    // Início do comentário
-    // Código de exemplo que foi modificado após criação da classe acompanhante
-    //
-    // private List<String> acompanhantes;
-    //
-    // public List<String> getAcompanhantes() {
-    //     return acompanhantes;
-    // }
-    //
-    // public void setAcompanhantes(List<String> acompanhantes) {
-    //     this.acompanhantes = acompanhantes;
-    // }
-    // Fim do comentário
 }

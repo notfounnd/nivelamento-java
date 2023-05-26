@@ -31,20 +31,19 @@ public class App {
 
         System.out.println(viagem.getDestino().getCidade());
         System.out.println(viagem.getAcompanhantes().size());
-        System.out.println(viagem.getAcompanhantes().get(0).getNome());
-        System.out.println(viagem.getAcompanhantes().get(1).getNome());
+
+        for (Acompanhante acompanhante : viagem.getAcompanhantes()) {
+            System.out.println(acompanhante.getNome());
+            System.out.println(acompanhante.isConfirmouCadastro());
+        }
 
         // Início do comentário
-        // Código de exemplo que foi modificado após criação da classe acompanhante
+        // Código de exemplo do laço "for" arcaico
         //
-        // List<String> acompanhantes = new ArrayList<String>();
-        // acompanhantes.add("Priscila");
-        // acompanhantes.add("Isabelle");
-        //
-        // viagem.setAcompanhantes(acompanhantes);
-        //
-        // System.out.println(viagem.getAcompanhantes().get(0));
-        // System.out.println(viagem.getAcompanhantes().get(1));
+        // for (int iterador = 0 ; iterador < viagem.getAcompanhantes().size() ; iterador++) {
+        //     System.out.println(viagem.getAcompanhantes().get(iterador).getNome());
+        //     System.out.println(viagem.getAcompanhantes().get(iterador).isConfirmouCadastro());
+        // }
         // Fim do comentário
     }
 }
