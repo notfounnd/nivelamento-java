@@ -1,7 +1,13 @@
 package dto;
 
 public class Viagem {
-    // Isso é um comentário que está dentro da classe
-}
+    // atributos da classe
+    public String destino;
 
-// Isso é um comentário que está fora da classe
+    // construtor da classe
+    public Viagem(String lugarDeDestino) {
+        this.destino = lugarDeDestino;
+    }
+
+
+}
